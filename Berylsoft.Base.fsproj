@@ -4,4 +4,7 @@
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <NoWarn>760</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src/Time.fs" />
+  </ItemGroup>
 </Project>
