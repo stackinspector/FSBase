@@ -5,6 +5,7 @@
     <NoWarn>760</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src/Text.fs" />
     <Compile Include="src/Time.fs" />
   </ItemGroup>
 </Project>
