@@ -31,13 +31,9 @@ module Time =
     let inline stdToAcc (std: int64) : int64 =
         std * TimeSpan.TicksPerMillisecond
 
-    // TODO optimization
     let accToStdRounded (acc: int64) : int64 =
-        acc
-        |> float
-        |> fun accTimestamp -> accTimestamp / float TimeSpan.TicksPerMillisecond
-        |> Math.Round
-        |> int64
+        let cut = TimeSpan.TicksPerMillisecond
+        acc / cut + (acc % cut) / (cut / 2L)
 
     let fromAccTimestamp (timestamp: int64) : DateTimeOffset =
         timestamp
